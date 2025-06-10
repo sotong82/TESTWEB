@@ -1,35 +1,132 @@
-<form method="POST" action="/admin/upload-image" enctype="multipart/form-data">
-  <label>분류:</label>
-  <select name="category">
-    <option value="brand">브랜드</option>
-    <option value="project">프로젝트</option>
-    <option value="banner">배너</option>
-    <option value="product">제품</option>
-  </select>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>필즈주식회사 | PILLS Corporation</title>
+  <meta name="description" content="PILLS는 고품질 IT 하드웨어 유통 및 산업용 솔루션 개발을 선도하는 글로벌 기술 기업입니다.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles/main.css" />
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+    header, footer, section { padding: 60px 20px; text-align: center; }
+    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 40px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: bold; font-size: 16px; }
+    nav ul li a.active { color: #005bac; }
+    .hero { position: relative; height: 90vh; overflow: hidden; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+    .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .hero p { font-size: 20px; max-width: 600px; margin: 0 auto; }
+    .cta { margin-top: 30px; }
+    .cta a { margin: 0 10px; padding: 12px 28px; background: #005bac; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    .about, .brands, .mission { background-color: #f8f8f8; padding: 80px 20px; }
+    .brands img { max-height: 40px; margin: 10px 20px; vertical-align: middle; }
+    form input, form textarea {
+      width: 80%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      display: block;
+    }
+    form button {
+      padding: 12px 24px;
+      background-color: #005bac;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer-links a { color: #ccc; margin: 0 10px; text-decoration: none; }
+    footer { background: #222; color: #ccc; }
+  </style>
+</head>
+<body>
 
-  <label>이미지 제목:</label>
-  <input type="text" name="title" />
+  <header>
+    <img src="assets/images/logo.png" alt="PILLS 로고" style="height: 60px;">
+    <nav>
+      <ul>
+        <li><a href="#about">회사소개</a></li>
+        <li><a href="#brands">브랜드</a></li>
+        <li><a href="#mission">비전</a></li>
+        <li><a href="#contact">문의</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <label>설명:</label>
-  <textarea name="description"></textarea>
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/videos/hero.mp4" type="video/mp4">
+    </video>
+    <div>
+      <h1>Connecting Tomorrow with Technology</h1>
+      <p>컴퓨터 관련 IT 하드웨어 유통 및 산업용 솔루션의 선도 기업, 필즈주식회사</p>
+      <div class="cta">
+        <a href="#about">회사소개</a>
+        <a href="#contact">문의하기</a>
+      </div>
+    </div>
+  </section>
 
-  <label>이미지 업로드:</label>
-  <input type="file" name="image_file" accept="image/*" required />
+  <section id="about" class="about">
+    <h2>필즈주식회사 소개</h2>
+    <p>
+      필즈주식회사는 컴퓨터 관련 IT 하드웨어 전문 유통 및 산업 기반 컴퓨팅 솔루션 개발에 앞장서는 전문 기업입니다.<br>
+      한국 시장에서 Inventec, Xfusion, Dell, HP, Lenovo, ASUS, ASUSTOR, GIGABYTE, ECS, ATEN, Intel, AMD, Promise 등의 브랜드와 함께 다양한 고객의 요구를 충족시키는 고품질의 IT 제품과 서비스를 제공합니다.
+    </p>
+  </section>
 
-  <label>ALT 텍스트:</label>
-  <input type="text" name="alt_text" />
+  <section id="brands" class="brands">
+    <h2>파트너 브랜드</h2>
+    <p>
+      <img src="assets/images/brand-inventec.png" alt="Inventec 서버 솔루션">
+      <img src="assets/images/brand-xfusion.png" alt="Xfusion AI 컴퓨팅">
+      <img src="assets/images/brand-dell.png" alt="Dell 엔터프라이즈">
+      <img src="assets/images/brand-hp.png" alt="HP 워크스테이션">
+      <img src="assets/images/brand-lenovo.png" alt="Lenovo 서버">
+      <img src="assets/images/brand-asus.png" alt="ASUS 마더보드">
+      <img src="assets/images/brand-intel.png" alt="Intel CPU 및 플랫폼">
+      <img src="assets/images/brand-amd.png" alt="AMD GPU 및 CPU">
+    </p>
+  </section>
 
-  <label>링크 URL (선택):</label>
-  <input type="url" name="link_url" />
+  <section id="mission" class="mission">
+    <h2>글로벌 IT 리더를 향한 우리의 비전</h2>
+    <p>
+      필즈주식회사는 2024년 글로벌 IT 솔루션 리더로서,<br>
+      첨단 기술과 솔루션을 통해 전 세계 기업에 혁신적인 IT 솔루션을 제공하는 것을 목표로 하고 있습니다.<br>
+      다양한 산업 분야에서 고객과의 협력을 강화하고, 능동적인 서비스를 통해 고객의 기대를 뛰어넘는 결과를 창출하고자 최선을 다하고 있습니다.
+    </p>
+  </section>
 
-  <label>노출 순서:</label>
-  <input type="number" name="display_order" value="0" />
+  <section id="contact">
+    <h2>문의하기</h2>
+    <p>필즈주식회사 고객지원팀이 신속히 응답 드리겠습니다.</p>
+    <form method="POST" action="https://formspree.io/f/your-id">
+      <input type="text" name="name" placeholder="이름" required>
+      <input type="email" name="email" placeholder="이메일" required>
+      <textarea name="message" placeholder="문의내용" required></textarea>
+      <button type="submit">보내기</button>
+    </form>
+    <p>📞 02-1661-9309 | ✉ pills@pills.co.kr</p>
+  </section>
 
-  <label>노출 여부:</label>
-  <select name="is_active">
-    <option value="1">예</option>
-    <option value="0">아니오</option>
-  </select>
+  <footer>
+    <p>© 2025 필즈주식회사. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="#">개인정보처리방침</a> |
+      <a href="#">이용약관</a> |
+      <a href="#">사이트맵</a>
+    </p>
+  </footer>
 
-  <button type="submit">등록하기</button>
-</form>
+</body>
+</html>
