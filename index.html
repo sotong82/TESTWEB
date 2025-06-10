@@ -18,14 +18,38 @@
     nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 40px; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; font-size: 16px; }
     nav ul li a.active { color: #005bac; }
-    .hero { position: relative; height: 90vh; overflow: hidden; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-    .hero video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+    .hero {
+      position: relative;
+      height: 90vh;
+      background-image: url('assets/images/hero-server.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
     .hero h1 { font-size: 48px; margin-bottom: 20px; }
     .hero p { font-size: 20px; max-width: 600px; margin: 0 auto; }
     .cta { margin-top: 30px; }
-    .cta a { margin: 0 10px; padding: 12px 28px; background: #005bac; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; }
+    .cta a {
+      margin: 0 10px;
+      padding: 12px 28px;
+      background: #005bac;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
     .about, .brands, .mission { background-color: #f8f8f8; padding: 80px 20px; }
-    .brands img { max-height: 40px; margin: 10px 20px; vertical-align: middle; }
+    .brands .brand-item {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+    .brands .brand-item img { max-height: 40px; display: block; margin: 0 auto 10px; }
+    .brands .brand-item span { display: block; font-size: 14px; color: #555; }
     form input, form textarea {
       width: 80%;
       max-width: 400px;
@@ -63,12 +87,9 @@
   </header>
 
   <section class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="assets/videos/hero.mp4" type="video/mp4">
-    </video>
     <div>
       <h1>Connecting Tomorrow with Technology</h1>
-      <p>컴퓨터 관련 IT 하드웨어 유통 및 산업용 솔루션의 선도 기업, 필즈주식회사</p>
+      <p>AI, 서버, 스토리지 유통 및 산업별 솔루션 구축의 선두 기업</p>
       <div class="cta">
         <a href="#about">회사소개</a>
         <a href="#contact">문의하기</a>
@@ -79,38 +100,44 @@
   <section id="about" class="about">
     <h2>필즈주식회사 소개</h2>
     <p>
-      필즈주식회사는 컴퓨터 관련 IT 하드웨어 전문 유통 및 산업 기반 컴퓨팅 솔루션 개발에 앞장서는 전문 기업입니다.<br>
-      한국 시장에서 Inventec, Xfusion, Dell, HP, Lenovo, ASUS, ASUSTOR, GIGABYTE, ECS, ATEN, Intel, AMD, Promise 등의 브랜드와 함께 다양한 고객의 요구를 충족시키는 고품질의 IT 제품과 서비스를 제공합니다.
+      PILLS는 컴퓨터 관련 IT 하드웨어 전문 유통 및 산업별 컴퓨팅 솔루션 구축에 집중하는 기술 전문 기업입니다.<br>
+      Inventec, ASUS, Dell, Intel, AMD 등 주요 제조사와의 파트너십을 기반으로 한국 및 글로벌 시장에 고성능 장비를 제공합니다.
     </p>
   </section>
 
   <section id="brands" class="brands">
-    <h2>파트너 브랜드</h2>
-    <p>
-      <img src="assets/images/brand-inventec.png" alt="Inventec 서버 솔루션">
-      <img src="assets/images/brand-xfusion.png" alt="Xfusion AI 컴퓨팅">
-      <img src="assets/images/brand-dell.png" alt="Dell 엔터프라이즈">
-      <img src="assets/images/brand-hp.png" alt="HP 워크스테이션">
-      <img src="assets/images/brand-lenovo.png" alt="Lenovo 서버">
-      <img src="assets/images/brand-asus.png" alt="ASUS 마더보드">
-      <img src="assets/images/brand-intel.png" alt="Intel CPU 및 플랫폼">
-      <img src="assets/images/brand-amd.png" alt="AMD GPU 및 CPU">
-    </p>
+    <h2>주요 파트너 브랜드</h2>
+    <div class="brand-item">
+      <img src="assets/images/brand-inventec.png" alt="Inventec">
+      <span>데이터센터 서버</span>
+    </div>
+    <div class="brand-item">
+      <img src="assets/images/brand-asus.png" alt="ASUS">
+      <span>워크스테이션 및 메인보드</span>
+    </div>
+    <div class="brand-item">
+      <img src="assets/images/brand-intel.png" alt="Intel">
+      <span>CPU 및 플랫폼</span>
+    </div>
+    <div class="brand-item">
+      <img src="assets/images/brand-amd.png" alt="AMD">
+      <span>GPU 및 AI 가속기</span>
+    </div>
   </section>
 
   <section id="mission" class="mission">
-    <h2>글로벌 IT 리더를 향한 우리의 비전</h2>
+    <h2>우리가 나아가는 방향</h2>
     <p>
-      필즈주식회사는 2024년 글로벌 IT 솔루션 리더로서,<br>
-      첨단 기술과 솔루션을 통해 전 세계 기업에 혁신적인 IT 솔루션을 제공하는 것을 목표로 하고 있습니다.<br>
-      다양한 산업 분야에서 고객과의 협력을 강화하고, 능동적인 서비스를 통해 고객의 기대를 뛰어넘는 결과를 창출하고자 최선을 다하고 있습니다.
+      PILLS는 고도화된 IT 인프라와 AI 산업을 위한 하드웨어 생태계를 구축하여,<br>
+      국내외 클라우드, 반도체, 의료영상, 정부 인프라 시장에 최적화된 솔루션을 제공합니다.<br>
+      글로벌 경쟁력을 가진 데이터센터 중심 기술기업으로 자리잡고자 합니다.
     </p>
   </section>
 
   <section id="contact">
     <h2>문의하기</h2>
-    <p>필즈주식회사 고객지원팀이 신속히 응답 드리겠습니다.</p>
-    <form method="POST" action="https://formspree.io/f/your-id">
+    <p>필즈 고객지원팀이 신속히 응답 드리겠습니다.</p>
+    <form method="POST" action="https://formspree.io/f/abcxyz12">
       <input type="text" name="name" placeholder="이름" required>
       <input type="email" name="email" placeholder="이메일" required>
       <textarea name="message" placeholder="문의내용" required></textarea>
