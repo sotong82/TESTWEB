@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>필즈주식회사 | PILLS Corporation</title>
   <meta name="description" content="PILLS는 고품질 IT 하드웨어 유통 및 산업용 솔루션 개발을 선도하는 글로벌 기술 기업입니다.">
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="assets/styles/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap">
   <style>
     body {
       font-family: 'Noto Sans KR', sans-serif;
@@ -14,27 +13,48 @@
       background-color: #fff;
       color: #333;
     }
-    header, footer, section { padding: 60px 20px; text-align: center; }
-    nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 40px; }
-    nav ul li a { text-decoration: none; color: #333; font-weight: bold; font-size: 16px; }
-    nav ul li a.active { color: #005bac; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #005bac;
+    }
     .hero {
       position: relative;
-      height: 90vh;
-      background-image: url('assets/images/hero-server.jpg');
+      background-image: url('assets/images/hero-server.jpg'); /* 새 이미지 경로 */
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       color: white;
       text-align: center;
+      padding: 140px 20px;
     }
-    .hero h1 { font-size: 48px; margin-bottom: 20px; }
-    .hero p { font-size: 20px; max-width: 600px; margin: 0 auto; }
-    .cta { margin-top: 30px; }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 20px;
+    }
     .cta a {
-      margin: 0 10px;
+      margin: 10px;
       padding: 12px 28px;
       background: #005bac;
       color: white;
@@ -42,40 +62,50 @@
       border-radius: 6px;
       font-weight: bold;
     }
-    .about, .brands, .mission { background-color: #f8f8f8; padding: 80px 20px; }
-    .brands .brand-item {
-      display: inline-block;
-      margin: 20px;
-      text-align: center;
+    section {
+      padding: 80px 20px;
+      max-width: 960px;
+      margin: 0 auto;
     }
-    .brands .brand-item img { max-height: 40px; display: block; margin: 0 auto 10px; }
-    .brands .brand-item span { display: block; font-size: 14px; color: #555; }
+    .brands img {
+      height: 40px;
+      margin: 20px;
+    }
+    .brand-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
     form input, form textarea {
-      width: 80%;
-      max-width: 400px;
-      margin: 10px auto;
+      width: 100%;
+      max-width: 500px;
       padding: 12px;
+      margin: 10px auto;
       border: 1px solid #ccc;
       border-radius: 6px;
       display: block;
     }
     form button {
-      padding: 12px 24px;
-      background-color: #005bac;
+      background: #005bac;
       color: white;
+      font-weight: bold;
+      padding: 12px 24px;
       border: none;
       border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
     }
-    .footer-links a { color: #ccc; margin: 0 10px; text-decoration: none; }
-    footer { background: #222; color: #ccc; }
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="assets/images/logo.png" alt="PILLS 로고" style="height: 60px;">
+    <img src="assets/images/logo.png" alt="PILLS 로고" style="height: 50px;">
     <nav>
       <ul>
         <li><a href="#about">회사소개</a></li>
@@ -87,57 +117,46 @@
   </header>
 
   <section class="hero">
-    <div>
-      <h1>Connecting Tomorrow with Technology</h1>
-      <p>AI, 서버, 스토리지 유통 및 산업별 솔루션 구축의 선두 기업</p>
-      <div class="cta">
-        <a href="#about">회사소개</a>
-        <a href="#contact">문의하기</a>
-      </div>
+    <h1>Connecting Tomorrow with Technology</h1>
+    <p>컴퓨터 관련 IT 하드웨어 유통 및 산업용 솔루션의 선도 기업, 필즈주식회사</p>
+    <div class="cta">
+      <a href="#about">회사소개</a>
+      <a href="#contact">문의하기</a>
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section id="about">
     <h2>필즈주식회사 소개</h2>
     <p>
-      PILLS는 컴퓨터 관련 IT 하드웨어 전문 유통 및 산업별 컴퓨팅 솔루션 구축에 집중하는 기술 전문 기업입니다.<br>
-      Inventec, ASUS, Dell, Intel, AMD 등 주요 제조사와의 파트너십을 기반으로 한국 및 글로벌 시장에 고성능 장비를 제공합니다.
+      필즈주식회사는 Inventec, Dell, HP, Lenovo, ASUS, AMD, Intel 등 글로벌 파트너들과 함께<br>
+      서버, 워크스테이션, 네트워크 장비를 국내 기업과 연구소에 공급하는 산업 전문 IT 기업입니다.
     </p>
   </section>
 
-  <section id="brands" class="brands">
-    <h2>주요 파트너 브랜드</h2>
-    <div class="brand-item">
+  <section id="brands">
+    <h2>파트너 브랜드</h2>
+    <div class="brand-grid">
       <img src="assets/images/brand-inventec.png" alt="Inventec">
-      <span>데이터센터 서버</span>
-    </div>
-    <div class="brand-item">
       <img src="assets/images/brand-asus.png" alt="ASUS">
-      <span>워크스테이션 및 메인보드</span>
-    </div>
-    <div class="brand-item">
-      <img src="assets/images/brand-intel.png" alt="Intel">
-      <span>CPU 및 플랫폼</span>
-    </div>
-    <div class="brand-item">
       <img src="assets/images/brand-amd.png" alt="AMD">
-      <span>GPU 및 AI 가속기</span>
+      <img src="assets/images/brand-intel.png" alt="Intel">
+      <img src="assets/images/brand-dell.png" alt="Dell">
+      <img src="assets/images/brand-hp.png" alt="HP">
     </div>
   </section>
 
-  <section id="mission" class="mission">
-    <h2>우리가 나아가는 방향</h2>
+  <section id="mission">
+    <h2>글로벌 IT 리더를 향한 우리의 비전</h2>
     <p>
-      PILLS는 고도화된 IT 인프라와 AI 산업을 위한 하드웨어 생태계를 구축하여,<br>
-      국내외 클라우드, 반도체, 의료영상, 정부 인프라 시장에 최적화된 솔루션을 제공합니다.<br>
-      글로벌 경쟁력을 가진 데이터센터 중심 기술기업으로 자리잡고자 합니다.
+      필즈는 고성능 컴퓨팅, AI 기반 인프라, 그리고 데이터센터 솔루션을 통해<br>
+      한국을 포함한 아시아 전역의 기업에게 미래지향적인 기술 환경을 제공합니다.
     </p>
   </section>
 
   <section id="contact">
     <h2>문의하기</h2>
-    <p>필즈 고객지원팀이 신속히 응답 드리겠습니다.</p>
-    <form method="POST" action="https://formspree.io/f/abcxyz12">
+    <p>필즈주식회사 고객지원팀이 신속히 응답 드리겠습니다.</p>
+    <form method="POST" action="https://formspree.io/f/your-id">
       <input type="text" name="name" placeholder="이름" required>
       <input type="email" name="email" placeholder="이메일" required>
       <textarea name="message" placeholder="문의내용" required></textarea>
@@ -148,11 +167,7 @@
 
   <footer>
     <p>© 2025 필즈주식회사. All rights reserved.</p>
-    <p class="footer-links">
-      <a href="#">개인정보처리방침</a> |
-      <a href="#">이용약관</a> |
-      <a href="#">사이트맵</a>
-    </p>
+    <p><a href="#" style="color:#ccc;">개인정보처리방침</a> | <a href="#" style="color:#ccc;">이용약관</a></p>
   </footer>
 
 </body>
